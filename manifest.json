@@ -1,0 +1,24 @@
+{
+    "name": "EU4 wiki helper",
+    "version": "1.0",
+    "description": "",
+    "background": {
+      "scripts": ["main.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://eu4.paradoxwikis.com/Achievements"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": [ 
+        "webRequest", 
+        "webRequestBlocking", 
+        "https://api.steampowered.com/*"
+    ],
+    "web_accessible_resources": [
+        "creds.json"
+    ],
+    "manifest_version": 2
+}
